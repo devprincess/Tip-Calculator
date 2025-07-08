@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex min-h-screen font-mono items-center bg-purple-400 justify-center">
+    <div class="bg-purple-300 flex sm:w-[90%] max-w-md flex-col p-[15px] items-center rounded-none sm:rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.3)]">
+        <p class="text-4xl font-black text-purple-900 mt-[20px] mb-[20px]">Tip Calculator</p>
+        <p class="text-xs text-center font-black leading-[1.2rem] sm:text-xs">Enter your bill amount and tip percentage to<br>calculate the total</p>
+        <div class="p-[15px] flex w-full flex-col">
+            <label for="bill amount" class="text-[#5f005f] w-full text-sm text-black font-semibold">Bill Amount:</label>
+            <input type="text" class="border-1 input w-full p-[5px]" name="bill amount" id="bill amount">
+        </div>
+        <div class="p-[15px] flex w-full flex-col">
+            <label for="tip percentage" class="text-[#5f005f] w-full text-sm text-black font-semibold">Tip Percentage:</label>
+            <input type="text" class="border-1 input w-full p-[5px]" name="tip percentage" id="tip percentage"> 
+        </div>
+        <div class="p-[15px] flex w-full flex-col">
+            <button class="w-full bg-purple-900 p-[5px] border-[2px] border-purple-900 font-black cursor-pointer text-white rounded-4xl">Calculate</button>
+        </div>
+        <p class="text-left w-full px-[15px] font-bold">Total: <span id="totalAmount"></span></p>
+    </div>
+  <script src="script.js"></script> 
+</body>
+</html>
