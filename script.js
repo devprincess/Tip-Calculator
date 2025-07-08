@@ -19,6 +19,11 @@ function calculateTip(){
     //display message
     totalAmountSpan.innerText = `$${totalAmount.toFixed(2)}`;
 
+    // Basic validation: Check if inputs are valid numbers and not negative
+    if (isNaN(billAmountValue) || isNaN(tipPercentageValue) || billAmountValue < 0 || tipPercentageValue < 0) {
+        totalAmountSpan.innerText = 'Please enter valid numbers for both fields.';
+        return; // Exit the function if validation fails
+    }
 }
 
 //cick button to get result
